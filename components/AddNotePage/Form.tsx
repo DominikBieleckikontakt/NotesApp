@@ -22,9 +22,9 @@ const Form = () => {
         const title = formData.get("title") as string;
         const desc = formData.get("description") as string;
         if (title?.length > 0 && desc?.length > 0) {
-          ref.current?.reset();
           setMessage("");
           await sendData(formData);
+          ref.current?.reset();
         } else {
           setMessage("Fields can't be empty");
         }
@@ -34,7 +34,13 @@ const Form = () => {
         <Label htmlFor="title" className="pl-1 mb-2">
           Note title
         </Label>
-        <Input type="text" id="title" name="title" placeholder="Note title" />
+        <Input
+          type="text"
+          id="title"
+          name="title"
+          placeholder="Note title"
+          maxLength={50}
+        />
       </div>
       <div className="mb-3">
         <Label htmlFor="description" className="pl-1 mb-2">
@@ -44,6 +50,7 @@ const Form = () => {
           id="description"
           name="description"
           placeholder="Note description"
+          maxLength={100}
         />
       </div>
       <p className="text-red-500 ml-1 font-bold">
