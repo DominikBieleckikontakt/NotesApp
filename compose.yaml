@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - MONGODB_URI=mongodb+srv://vercel-admin-user:d9xNZlqHTlfNa2l2@notes.5q0a169.mongodb.net/notes?retryWrites=true&w=majority
+    ports:
+      - 3000:3000
+    develop:
+      watch:
+        - path: ./package.json
+          action: rebuild
+        - path: ./package-lock.json
+          action: rebuild
+        - path: ./next.config.js
+          action: rebuild
+        - path: .
+          target: /app
+          action: sync
+volumes:
+  notes:
