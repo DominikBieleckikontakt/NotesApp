@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { QueryProvider } from "@/components/UI/QueryProvider";
 import { ThemeProvider } from "@/components/UI/ThemeProvider";
+import NavBar from "@/components/UI/NavBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,10 +23,11 @@ export default function RootLayout({
         <QueryProvider>
           <ThemeProvider
             attribute="class"
-            defaultTheme="system"
+            defaultTheme="dark"
             enableSystem
             disableTransitionOnChange
           >
+            <NavBar />
             {children}
           </ThemeProvider>
         </QueryProvider>
