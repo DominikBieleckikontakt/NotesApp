@@ -55,13 +55,13 @@ To run the application using Docker, follow these steps:
 1. Build the Docker image:
 
    ```bash
-   docker build -t notekeeper-web-app .
+   docker build -t NotesApp .
    ```
 
 2. Run the Docker container:
 
    ```bash
-   docker run -p 3000:3000 notekeeper-web-app
+   docker run -p 3000:3000 NotesApp
    ```
 
    Access the app at `http://localhost:3000` locally or `https://https://notes-iota-seven.vercel.app`.
