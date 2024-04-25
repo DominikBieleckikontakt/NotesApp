@@ -64,7 +64,7 @@ To run the application using Docker, follow these steps:
    docker run -p 3000:3000 NotesApp
    ```
 
-   Access the app at `http://localhost:3000` locally or `https://https://notes-iota-seven.vercel.app`.
+   Access the app at `http://localhost:3000` locally or `https://notes-iota-seven.vercel.app`.
 
 ## Contribution
 
